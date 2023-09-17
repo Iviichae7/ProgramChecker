@@ -1,0 +1,18 @@
+Step 1.
+javac -d out src/*.java src/checks/*.java
+
+Step 2.
+jar cvfe Kiosk.jar src.App -C out/ . -C . resources
+
+Step 3.
+move Kiosk.jar input/
+
+Step 4.
+jpackage --type app-image --input input --dest output --name Kiosk --main-jar Kiosk.jar --main-class src.App --icon C:\ProgramChecker\resources\images\KioskIcon.ico
+
+
+Step 5.
+cd output\Kiosk
+
+Step 6.
+.\Kiosk.exe
