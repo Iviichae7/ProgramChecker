@@ -225,7 +225,8 @@ public class CombinedChecks {
                     + "ProgramChecker";
 
             ProcessBuilder builder = new ProcessBuilder("powershell.exe", ".\\ModifyShortcutTarget.ps1");
-            builder.directory(new File(scriptPath)); // Set the working directory
+            // Set the working directory
+            builder.directory(new File(scriptPath)); 
             Process process = builder.start();
             process.waitFor();
 
